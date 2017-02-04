@@ -32,29 +32,75 @@ class SimpleCalculator
 
 end
 
-class FancyCalculator
-
-  def add(first_number, second_number)
-    first_number + second_number
-  end
-
-  def subtract(first_number, second_number)
-    first_number - second_number
-  end
-
-  def multiply(first_number, second_number)
-    first_number * second_number
-  end
-
-  def divide(first_number, second_number)
-    first_number / second_number
-  end
-
+class FancyCalculator < SimpleCalculator
   def square_root(number)
     Math.sqrt(number)
   end
 
 end
 
+calculation = FancyCalculator.new
 # Write your own driver code below:
 
+puts "TESTING find_missing_letter..."
+puts
+
+result = calculation.add(3,2)
+
+puts "Your method returned:"
+puts result
+puts
+
+if result == 5
+  puts "PASS!"
+else
+  puts "F"
+end
+
+result = calculation.subtract(3,2)
+
+puts "Your method returned:"
+puts result
+puts
+
+if result == 1
+  puts "PASS!"
+else
+  puts "F"
+end
+
+result = calculation.multiply(3,2)
+
+puts "Your method returned:"
+puts result
+puts
+
+if result == 6
+  puts "PASS!"
+else
+  puts "F"
+end
+
+result = calculation.divide(6,2)
+
+puts "Your method returned:"
+puts result
+puts
+
+if result == 3
+  puts "PASS!"
+else
+  puts "F"
+end
+
+result = calculation.square_root(9)
+
+puts "Your method returned:"
+puts result
+puts
+
+if result == 3.0
+  puts "PASS!"
+else
+  puts "F"
+end
